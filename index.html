@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+<script>        
+let blood_type1 = 'A';
+let blood_type2 = 'B';
+let queryBlood_Type_Dual = {};
+
+        queryBlood_Type_Dual.selector = {};
+        queryBlood_Type_Dual.selector.blood_type = { blood_type1: {"$and": blood_type2} };
+        // queryBlood_Type_Dual.selector.blood_type = { "$eq": blood_type2 };
+        // queryBlood_Type_Dual.selector.blood_type1 = blood_type1;
+        // queryBlood_Type_Dual.selector.blood_type2 = blood_type2;
+        queryBlood_Type_Dual.ddoc = "blood_typeIndexDoc";
+        queryBlood_Type_Dual.use_index = {'fields':['blood_type']}
+        queryBlood_Type_Dual = JSON.stringify(queryBlood_Type_Dual)
+        console.log(queryBlood_Type_Dual);
+    </script>
