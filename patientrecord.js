@@ -8,8 +8,7 @@ class PatientRecord extends State {
         super(PatientRecord.getClass(),[obj.username, obj.name]);
         Object.assign(this,obj);
     }
-
-    //Helper Functions for reading and writing attributes
+    
     getUsername() { return this.username }
     setUsername(newUsername) { return this.username=newUsername }
     getName() { return this.name }
@@ -22,14 +21,12 @@ class PatientRecord extends State {
     getbloodtype() { return this.blood_type }
     setbloodtype(newbloodtype) { return this.blood_type=newbloodtype }
 
-    //TASK 2 - Write a getter and a setter for a field called lastCheckupDate
-    // write a getter and a setter for a field called lastCheckupDate
     
     setlastCheckupDate(newlastCheckupDate) { return this.lastCheckupDate=newlastCheckupDate }
     getlastCheckupDate() { return this.lastCheckupDate }
     
 
-    //Helper functions
+ 
 
     static fromBuffer(buffer) {
         return PatientRecord.deserialize(Buffer.from(JSON.parse(buffer)));
