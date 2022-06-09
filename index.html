@@ -15,9 +15,6 @@ let queryBlood_Type_Dual = {};
 
         queryBlood_Type_Dual.selector = {};
         queryBlood_Type_Dual.selector.blood_type = { blood_type1: {"$and": blood_type2} };
-        // queryBlood_Type_Dual.selector.blood_type = { "$eq": blood_type2 };
-        // queryBlood_Type_Dual.selector.blood_type1 = blood_type1;
-        // queryBlood_Type_Dual.selector.blood_type2 = blood_type2;
         queryBlood_Type_Dual.ddoc = "blood_typeIndexDoc";
         queryBlood_Type_Dual.use_index = {'fields':['blood_type']}
         queryBlood_Type_Dual = JSON.stringify(queryBlood_Type_Dual)
