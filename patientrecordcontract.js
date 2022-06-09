@@ -27,9 +27,6 @@ class PatientRecordContract extends Contract {
         super('edu.asu.patientrecordcontract');
     }
 
-    /**
-     * Define a custom context for commercial paper
-    */
     createContext() {
         return new PatientRecordContext();
     }
@@ -159,8 +156,6 @@ class PatientRecordContract extends Contract {
     }
 
     /**
-     * Query by Blood_Type
-     *
      * @param {Context} ctx the transaction context
      * @param {String} blood_type blood_type to queried
     */
